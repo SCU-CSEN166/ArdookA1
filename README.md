@@ -66,7 +66,7 @@
 | Member | Primary responsibility (Data / models / evaluation / integration / etc.) | Specific Weekly contribution (work completed) | Planned next task |
 |---|---|---|---|
 |Emily |---|Repository setup and preliminary plan| Find suitable data to supplement the current data|
-|---|---|---|---|
+|Flora|---|Creating Fake/Synthetic Data plan|Find real data that aren't aligned with Ardook just to test the model more to make sure it is accurate or precise|
 |---|---|---|---|
 ---
 
