@@ -42,7 +42,10 @@
 ### 3. Proposed data
 | Dataset/source | Link or access instructions | Purpose | Size / languages | Privacy or usage considerations |
 |---|---|---|---|---|
+|---|---|---|---|---|
+|---|---|---|---|---|
 | [Name] | [URL](https://huggingface.co/datasets) or other instructions] | [Training/development/evaluation] | [Details] | [Notes] |
+|Ardook All Grant Recommendations | [URL](https://drive.google.com/file/d/10EcaXrXUItPKAJwdqx6BTepwhGWMQIUn/view) | |---|
 
 - **Data preparation:** [Cleaning, anonymization, annotation, splitting, deduplication, etc.]
 - **Data limitations:** [What is missing, noisy, or uncertain?]
@@ -51,6 +54,9 @@
 | Metric / test | What it measures | How it will be calculated | Target / success criterion |
 |---|---|---|---|
 | [Metric - e.g Accuracy, F1, AoC] | [Quality dimension] | [Method/ Formula] | [Target] |
+|---|---|---|---|
+|---|---|---|---|
+|---|---|---|---|
 
 - **Evaluation examples:** [How will you build or select a development set?]
 - **Human verification:** [If relevant, who will check outputs and how?]
@@ -59,7 +65,7 @@
 ### 5. Team responsibilities
 | Member | Primary responsibility (Data / models / evaluation / integration / etc.) | Specific Weekly contribution (work completed) | Planned next task |
 |---|---|---|---|
-|Emily |---|Repository setup and preliminary plan|Find suitable data to supplement the current data|
+|Emily |---|Repository setup and preliminary plan| Find suitable data to supplement the current data|
 |---|---|---|---|
 |---|---|---|---|
 ---
