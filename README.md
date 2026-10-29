@@ -26,8 +26,8 @@
 **Deliverable during Week 6 Lab:** A project plan (write in this README file) describing your problem formulation, proposed approach, each team member's responsibilities, proposed baseline models with Hugging Face links, proposed evaluation metrics, proposed data with links, and goals for each week.
 
 ### 1. Problem formulation and social impact
-- **Problem:** What specific task are you solving? [Write a precise problem statement.]
-- **Intended users:** Who would use the system, and for what decisions or activities?
+- **Problem:** Ardook is an Armenia-based organization. Organizations of these type apply for various types of grants, and our problem is to determine which ones are well-fit for Ardook.
+- **Intended users:** Intended users are members of the Ardook organization. 
 - **Inputs and outputs:** What will the system receive and produce? Give one concrete example.
 - **Success criteria:** What would make the system useful and reliable?
 - **Constraints and risks:** [e.g., privacy, missing data, hallucinations, language coverage, human verification]
