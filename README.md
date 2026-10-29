@@ -57,9 +57,8 @@
 - **Failure cases to watch:** [At least two anticipated risks]
 
 ### 5. Team responsibilities
-| Member | Primary responsibility | Specific Weekly contribution | Planned next task |
+| Member | Primary responsibility (Data / models / evaluation / integration / etc.) | Specific Weekly contribution (work completed) | Planned next task |
 |---|---|---|---|
-| [Name] | [Data / models / evaluation / integration / etc.] | [Actual work completed] | [Next action] |
 |Emily |---|Repository setup and preliminary plan|Find suitable data to supplement the current data|
 |---|---|---|---|
 |---|---|---|---|
