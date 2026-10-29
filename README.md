@@ -60,7 +60,9 @@
 | Member | Primary responsibility | Specific Weekly contribution | Planned next task |
 |---|---|---|---|
 | [Name] | [Data / models / evaluation / integration / etc.] | [Actual work completed] | [Next action] |
-
+|Emily |---|Repository setup and preliminary plan|Find suitable data to supplement the current data|
+|---|---|---|---|
+|---|---|---|---|
 ---
 
 ## Week 6 — Build: Working Baseline
