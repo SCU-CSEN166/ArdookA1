@@ -28,7 +28,7 @@
 ### 1. Problem formulation and social impact
 - **Problem:** Ardook is an Armenia-based organization. Organizations of these type apply for various types of grants, and our problem is to determine which ones are well-fit for Ardook.
 - **Intended users:** Intended users are members of the Ardook organization. 
-- **Inputs and outputs:** What will the system receive and produce? Give one concrete example.
+- **Inputs and outputs:** The system will recieve a grant that Ardook can apply to and will a recommendation score indicating how well-fit it is for the organization, as well as recommended actions.
 - **Success criteria:** What would make the system useful and reliable?
 - **Constraints and risks:** [e.g., privacy, missing data, hallucinations, language coverage, human verification]
 
