@@ -37,6 +37,8 @@
 - **Baseline(s):** [Describe the simplest end-to-end method you can implement.]
 - **Proposed models/tools:** [Name, purpose, and link to each Hugging Face model or other resource.]
   - [Model name](https://huggingface.co/models) — [What it will do; why selected]
+  - [all-MiniLM-L6-v2](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2) - [Vector space for semantic search and similarity which we will look at keywords like Women, Female, Small Business]
+  - [bge-m3](https://huggingface.co/BAAI/bge-m3) - [Highly capable of cross-lingual alignment so it is good for Armenian language and Georgian]
 - **Alternative approach:** [What will you try if the baseline underperforms?]
 
 ### 3. Proposed data
