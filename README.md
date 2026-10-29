@@ -49,19 +49,19 @@
 | [Name] | [URL](https://huggingface.co/datasets) or other instructions] | [Training/development/evaluation] | [Details] | [Notes] |
 |Ardook All Grant Recommendations | [URL](https://drive.google.com/file/d/10EcaXrXUItPKAJwdqx6BTepwhGWMQIUn/view) | |---|
 
-- **Data preparation:** [Cleaning, anonymization, annotation, splitting, deduplication, etc.]
+- **Data preparation:** Removing duplicate rows, making sure numerical features are on a scale that[Cleaning, anonymization, annotation, splitting, deduplication, etc.]
 - **Data limitations:** [What is missing, noisy, or uncertain?]
 
 ### 4. Proposed evaluation
 | Metric / test | What it measures | How it will be calculated | Target / success criterion |
 |---|---|---|---|
-| [Metric - e.g Accuracy, F1, AoC] | [Quality dimension] | [Method/ Formula] | [Target] |
-|---|---|---|---|
-|---|---|---|---|
-|---|---|---|---|
-
+| [Metric - e.g Accuracy, F1, AoC] | [Quality dimension] | [Method/ Formula] | [Target] | 
+| Accuracy | accuracy | number of correct predictions/number of total predictions | aim for 1.0 | 
+|---|---|---|---| 
+|---|---|---|---| 
+ 
 - **Evaluation examples:** [How will you build or select a development set?]
-- **Human verification:** [If relevant, who will check outputs and how?]
+- **Human verification:** At least two team members will check for baseline eligibility (for example, if the grant needs a US-based branch).  
 - **Failure cases to watch:** [At least two anticipated risks]
 
 ### 5. Team responsibilities
@@ -69,7 +69,7 @@
 |---|---|---|---|
 |Emily |---|Repository setup and preliminary plan| Find suitable data to supplement the current data|
 |Flora|---|Creating Fake/Synthetic Data plan|Find real data that aren't aligned with Ardook just to test the model more to make sure it is accurate or precise|
-|---|---|---|---|
+| Avner |---|---|---|
 ---
 
 ## Week 6 — Build: Working Baseline
