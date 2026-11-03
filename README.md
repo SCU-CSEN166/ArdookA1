@@ -50,7 +50,7 @@
 |Ardook All Grant Recommendations | [URL](https://drive.google.com/file/d/10EcaXrXUItPKAJwdqx6BTepwhGWMQIUn/view) | |---|
 
 - **Data preparation:** Removing duplicate rows, making sure numerical features are on a scale that[Cleaning, anonymization, annotation, splitting, deduplication, etc.]
-- **Data limitations:** [What is missing, noisy, or uncertain?]
+- **Data limitations:** Our provided dataset is currently small, so we need more data to train our model on.
 
 ### 4. Proposed evaluation
 | Metric / test | What it measures | How it will be calculated | Target / success criterion |
