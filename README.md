@@ -9,7 +9,7 @@
 
 **Link:** https://github.com/SCU-CSEN166/ArdookA1
 
-**Last updated:** 10/28/2026
+**Last updated:** 11/3/2026
 
 > **How to use this README:** Maintain this single file throughout the project. Complete the Week 5 project plan first, then update the appropriate weekly section before each milestone. Be specific and honest: describe what you attempted, what worked, what did not work, and what evidence supports your conclusions. For every week, document each member's actual contribution. If a task was not completed, explain the blocker and next step. Do not include private or sensitive data in this public README.
 
@@ -26,15 +26,15 @@
 **Deliverable during Week 6 Lab:** A project plan (write in this README file) describing your problem formulation, proposed approach, each team member's responsibilities, proposed baseline models with Hugging Face links, proposed evaluation metrics, proposed data with links, and goals for each week.
 
 ### 1. Problem formulation and social impact
-- **Problem:** Ardook is an Armenia-based organization. Organizations of these type apply for various types of grants, and our problem is to determine which ones are well-fit for Ardook.
-- **Intended users:** Intended users are members of the Ardook organization who apply for grants. 
+- **Problem:** Ardook is an Armenian-based organization. Nonprofits such as Ardook apply for various types of grants, and our problem is to determine which ones are well-fit for Ardook.
+- **Intended users:** Intended users are the members of the Ardook organization who are going to apply for grants. 
 - **Inputs and outputs:** The system will recieve a grant that Ardook can apply to and will output a recommendation score indicating how well-fit it is for the organization, as well as recommended actions.
-- **Success criteria:** Solid reasoning behind whether the provided grant is a good fit, able to be nuanced in judgement, provides actionable steps for organizers. 
+- **Success criteria:** Our success criteria would be solid reasoning behind whether the provided grant is a good fit, able to be nuanced in judgement, provides actionable steps for organizers. 
 - **Constraints and risks:** Hallucination of recommendations (providing invalid/inaccurate info). There may not be enough data currently to parse through.
 
 ### 2. Proposed technical approach
 - **Pipeline:** [List the main steps from input to output.]
-- **Baseline(s):** [Describe the simplest end-to-end method you can implement.]
+- **Baseline(s):** We can train a logistic regression model to be able to handle our grants and identify certain keywords that might be helpful for determining grant elegibility.
 - **Proposed models/tools:** [Name, purpose, and link to each Hugging Face model or other resource.]
   - [Model name](https://huggingface.co/models) — [What it will do; why selected]
   - [all-MiniLM-L6-v2](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2) - [Vector space for semantic search and similarity which we will look at keywords like Women, Female, Small Business]
