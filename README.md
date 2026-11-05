@@ -76,7 +76,7 @@ Detailed Accuracy Breakdown
 |---|---|---|---|
 |Emily | Data collection and model testing|Repository setup and preliminary plan| Find suitable data to supplement the current data|
 |Flora|Data and models|Creating Fake/Synthetic Data plan, and wrote the Evaluation examples, Human Verification, and failure cases to watch. I also found the models that we will use in training of our datasets. Introduced more metrics that we could use to evaluate our models. |Find real data that aren't aligned with Ardook just to test the model more to make sure it is accurate or precise|
-| Avner | Models, Evalatuation Metrics |  | |
+| Avner | Models, Evalatuation Metrics | Identified and defined more detailed evaluation metrics | Research and find additional models |
 ---
 
 ## Week 6 — Build: Working Baseline
