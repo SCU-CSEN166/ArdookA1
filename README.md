@@ -58,8 +58,7 @@
 | Metric / test | What it measures | How it will be calculated | Target / success criterion |
 |---|---|---|---|
 | [Metric - e.g Accuracy, F1, AoC] | [Quality dimension] | [Method/ Formula] | [Target] | 
-| Accuracy | accuracy | number of correct predictions/number of total predictions | aim for 1.0 | 
-|                      |
+| Accuracy | accuracy | number of correct predictions/number of total predictions | aim for 1.0 |
 | Precision | precision | number of recommended grants are revelant | Aim to be above 0.7| 
 | Recall | recall | number of relevant grants the model sucessfully identified| Aim to be above 0.7| 
  
