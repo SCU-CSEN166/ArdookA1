@@ -60,8 +60,12 @@
 | [Metric - e.g Accuracy, F1, AoC] | [Quality dimension] | [Method/ Formula] | [Target] | 
 | Accuracy | accuracy | number of correct predictions/number of total predictions | aim for 1.0 |
 | Precision | precision | number of recommended grants are revelant | Aim to be above 0.7| 
-| Recall | recall | number of relevant grants the model sucessfully identified| Aim to be above 0.7| 
- 
+| Recall | recall | number of relevant grants the model sucessfully identified | Aim to be above 0.7| 
+
+Detailed Accuracy Breakdown
+| Specifics | What it measures | How it will be calculated |
+| Hard-Constraints | Constraints and other non-negotiable conditions | 
+| Evidence Grounding | Eligibility, criteria, and other information not hallucinated |
 - **Evaluation examples:** We will look at the direct wording of Women, Female, and Small Business in particular, and from there we will look at related examples of like Female/Women-Owned Enterprises or Entrepreneurship as well as Business Ownership. Further along, we will look at Disability inclusion, underserved communities, and family-oriented. 
 - **Human verification:** At least two team members will check for baseline eligibility throughout all the grants, whether it is US-based or elsewhere.  
 - **Failure cases to watch:** Two cases that we will watch for are early misclassification that are way larger than we expected, or any wrong classification that we need to either relabel the data or input more data to train. 
