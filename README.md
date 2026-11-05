@@ -63,6 +63,7 @@
 | Recall | recall | number of relevant grants the model sucessfully identified | Aim to be above 0.7| 
 
 Detailed Accuracy Breakdown
+|---|---|---|---|
 | Specifics | What it measures | How it will be calculated |
 | Hard-Constraints | Constraints and other non-negotiable conditions | 
 | Evidence Grounding | Eligibility, criteria, and other information not hallucinated |
