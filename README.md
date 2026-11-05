@@ -90,7 +90,7 @@
 | Attempt / change | Worked? (Yes / Partly / No) | Evidence (output, metric, link) | What we learned / next step |
 |---|---|---|---|
 | Implementation of TF-IDF as a baseline model for comparing Ardook's profile to grants | Worked Yes | (in Python code) | Useful baseline but relies more on shared keywords, which limits looking at contextual relationships. |
-| Implementation of all-MiniLM-L6-V2 for semantic similarity | Worked Yes | (in Python code) | It has semantic embeddings that look at related concepts when exact wording is different. Continue testing and comparing against TF-IDF |
+| Implementation of all-MiniLM-L6-V2 for semantic similarity | Worked, there is still some error present (amount of observations classified as strong fit/excellent do not match) | (in Python code) | It has semantic embeddings that look at related concepts when exact wording is different. Continue adjusting keywords, search queries, testing and comparing against TF-IDF |
 | Attempted to use BGE-M3 using GoogleTranslate Feature | Partly | (in Python code) | I will reduce request frequency and smaller batches |
 | Attempted to use BGE-M3 using AutoModelForSeq2SeqLM| Worked Yes | (in Python code) | Look more into other translating features back into English after using models similar to BGE-M3 and testing with other models that also does the same thing as BGE-M3|
 
