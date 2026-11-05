@@ -79,23 +79,26 @@
 **Deliverable during Week 7 Lab:** A runnable baseline, setup/run instructions, and 1–2 example inputs and outputs. Update this section with what worked, what failed, and individual contributions.
 
 ### Implementation status
-- **What runs end-to-end now?** [Describe exactly.]
-- **How to run it:** [Commands, dependencies, configuration; refer to Setup below.]
-- **Model(s) and data actually used:** [Names, versions, links, and any changes from the plan.]
-- **Example 1:** Input: [non-sensitive example] → Output: [result]
-- **Example 2:** Input: [non-sensitive example] → Output: [result]
+- **What runs end-to-end now?** We built a pipeline that compares descriptions of each grant against Ardook's profile to figure out grant/fuding opportunities. We loaded the grant data from Excel Spreadsheets with Pandas, which helped us preprocess and clean our data that focuses on descriptions and eligibility. After that, we let it score and rank each grant in the category. So far, we worked at a basic level using TF-IDF and MiniLM-L6-V2. 
+- **How to run it:** Python in Jupyter Notebook utilizing WAVE
+- **Model(s) and data actually used:** TF-IDF (Scikit-learn): NLP baseline to compare grant descriptions based on keyword and text similarity. all-MiniLM-L6-V2 to explore semantic similarity between profile/grant descriptions, which goes beyond the normal keyword lookup. I have attempted to use BGE-M3 as a multilingual embedding model, but encountered difficulties with execution.  
+- **Example 1:** Input: "We are a women-led NGO in Armenia focused on gender equality and women's rights."  → Output: From the multilingual spreadsheet that I have used, it outputted: The Women's Foundation in Armenia as the best pick. 
+- **Example 2:** Input: Grants supporting women entrepreneurs and business development → Output: From the Ardook data spreadsheet, the rank outputted Program: WomensNet Amber Grant / Startup Grant as the top grant. 
+- (see the outputs in the Python file that I have attached to this GitHub; the spreadsheet will be shown in the Lab)
 
 ### Attempts and outcomes
 | Attempt / change | Worked? (Yes / Partly / No) | Evidence (output, metric, link) | What we learned / next step |
 |---|---|---|---|
-| [Attempt] | [Status] | [Evidence] | [Learning] |
+| Implementation of TF-IDF as a baseline model for comparing Ardook's profile to grants | Worked Yes | (in Python code) | Useful baseline but relies more on shared keywords, which limits looking at contextual relationships. |
+| Implementation of all-MiniLM-L6-V2 for semantic similarity | Worked Yes | (in Python code) | It has semantic embeddings that look at related concepts when exact wording is different. Continue testing and comparing against TF-IDF |
+| Attempted to use BGE-M3 using GoogleTranslate Feature | Partly | (in Python code) | I will reduce request frequency and smaller batches |
+| Attempted to use BGE-M3 using AutoModelForSeq2SeqLM| Worked Yes | (in Python code) | Look more into other translating features back into English after using models similar to BGE-M3 and testing with other models that also does the same thing as BGE-M3|
 
 ### Individual contributions during that week
 | Member | What I personally implemented/tested | Result (worked / partly / failed) | Evidence (commit, PR, experiment) | Blocker / next step |
 |---|---|---|---|---|
 | [Name] | [Specific contribution] | [Status] | [Link] | [Next step] |
-|---|---|---|---|
-|---|---|---|---|
+| Flora Li | Model Usage, Model Evaluation, Data Finding/Making, Writing of this ReadMe file, Making of the Python code (using AI)| Worked mostly | (will input Python link here) | Work on making a better model by utilizing other metrics and looking into more models that could be used|
 
 ---
 
