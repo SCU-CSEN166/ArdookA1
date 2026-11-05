@@ -9,7 +9,7 @@
 
 **Link:** https://github.com/SCU-CSEN166/ArdookA1
 
-**Last updated:** 11/3/2026
+**Last updated:** 11/4/2026
 
 > **How to use this README:** Maintain this single file throughout the project. Complete the Week 5 project plan first, then update the appropriate weekly section before each milestone. Be specific and honest: describe what you attempted, what worked, what did not work, and what evidence supports your conclusions. For every week, document each member's actual contribution. If a task was not completed, explain the blocker and next step. Do not include private or sensitive data in this public README.
 
@@ -29,24 +29,26 @@
 - **Problem:** Ardook is an Armenian-based organization. Nonprofits such as Ardook apply for various types of grants, and our problem is to determine which ones are well-fit for Ardook.
 - **Intended users:** Intended users are the members of the Ardook organization who are going to apply for grants. 
 - **Inputs and outputs:** The system will recieve a grant that Ardook can apply to and will output a recommendation score indicating how well-fit it is for the organization, as well as recommended actions.
-- **Success criteria:** Our success criteria would be solid reasoning behind whether the provided grant is a good fit, able to be nuanced in judgement, provides actionable steps for organizers. 
+- **Success criteria:** Our success criteria would be solid reasoning behind whether the provided grant is a good fit, able to be nuanced in judgement, and provides actionable steps for organizers. 
 - **Constraints and risks:** Hallucination of recommendations (providing invalid/inaccurate info). There may not be enough data currently to parse through.
 
 ### 2. Proposed technical approach
-- **Pipeline:** [List the main steps from input to output.]
-- **Baseline(s):** We can train a logistic regression model to be able to handle our grants and identify certain keywords that might be helpful for determining grant elegibility.
+- **Pipeline:** Our pipeline consists of inputting data and then immediately doing text preprocessing. After doing the text preprocessing, we will be doing some feature extraction where we use like TF-IDF and keyword matching. After doing the feature extraction, we will do a model comparison, which can help us decide on the ranking and evaluation of those models that we would be able to use to get a final output.
+- **Baseline(s):** We can train a logistic regression model to be able to handle our grants and identify certain keywords that might be helpful for determining grant eligibility. We use TF-IDF to identify keywords in the descriptions of the grants in the database. Then we could calculate the similarity score using cosine similarity. Then, for the logistic regression model, we would classify the grants into different categories, such as women-focused, disability focused, children/family-focused, or general funding. We will then compare the predictions against the semantic similarity models. 
 - **Proposed models/tools:** [Name, purpose, and link to each Hugging Face model or other resource.]
-  - [Model name](https://huggingface.co/models) — [What it will do; why selected]
-  - [all-MiniLM-L6-v2](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2) - [Vector space for semantic search and similarity which we will look at keywords like Women, Female, Small Business]
-  - [bge-m3](https://huggingface.co/BAAI/bge-m3) - [Highly capable of cross-lingual alignment so it is good for Armenian language and Georgian]
-- **Alternative approach:** [What will you try if the baseline underperforms?]
+  - [all-MiniLM-L6-v2](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2) - [It creates sentence embeddings for semantic search and similarity, which we will look at keywords like Women, Female, Small Business]
+  - [bge-m3](https://huggingface.co/BAAI/bge-m3) - [Highly capable of cross-lingual alignment, so it is good for Armenian, Georgian, or other foreign languages that aren't English]
+  - [Logistic Regression](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression) - [It is the primary supervised baseline that we will use, where it can sort and classify grants into categories, which is especially useful in TF-IDF score calculation]
+  - [BART-Large-MNLI](https://huggingface.co/facebook/bart-large-mnli) - [It is a zero-shot classifier that classifies grants into predefined categories without a huge labeled dataset. It is useful for limited data of examples of each grant category.]
+  - [DistilBERT](https://huggingface.co/distilbert/distilbert-base-uncased) - [This is a smaller transformer model that can be fine tuned to our grant dataset, as it is useful in the comparison of classification performance and logistic regression.]
+- **Alternative approach:** [If the baseline underperforms, we will use a hybrid search where we can combine keyword matching with semantic similarity, which can be helpful in keyword matching and concepts that may have different wording. If we then collected more labeled grant examples, we can then fine-tune the models such as DistilBERT to categorize grants more accurately. Then we will look at ranking the grants to see which ones have a stronger relationship. Then if we have time, we look at extraction of other data such as demographics, ownership, organization type and/or their funding purposes.]
 
 ### 3. Proposed data
 | Dataset/source | Link or access instructions | Purpose | Size / languages | Privacy or usage considerations |
 |---|---|---|---|---|
 |---|---|---|---|---|
 |---|---|---|---|---|
-| [Name] | [URL](https://huggingface.co/datasets) or other instructions] | [Training/development/evaluation] | [Details] | [Notes] |
+| Synthetic Data  | [URL](https://docs.google.com/spreadsheets/d/1vEmw_SD_ZDxQbQ-pE6rCKqWJaf-RASZWW6QTLTP5HtI/edit?gid=823558156#gid=823558156) | Training/Evaluation | Synthetic Data Created to Train/Test the Model| --- |
 |Ardook All Grant Recommendations | [URL](https://drive.google.com/file/d/10EcaXrXUItPKAJwdqx6BTepwhGWMQIUn/view) | |---|
 
 - **Data preparation:** Removing duplicate rows, making sure numerical features are on a scale that[Cleaning, anonymization, annotation, splitting, deduplication, etc.]
@@ -57,18 +59,17 @@
 |---|---|---|---|
 | [Metric - e.g Accuracy, F1, AoC] | [Quality dimension] | [Method/ Formula] | [Target] | 
 | Accuracy | accuracy | number of correct predictions/number of total predictions | aim for 1.0 | 
-|---|---|---|---| 
-|---|---|---|---| 
+| Precision | precision | number of recommended grants are revelant | Aim to be above 0.7| 
+| Recall | recall | number of relevant grants the model sucessfully identified| Aim to be above 0.7| 
  
-- **Evaluation examples:** [How will you build or select a development set?]
-- **Human verification:** At least two team members will check for baseline eligibility (for example, if the grant needs a US-based branch).  
-- **Failure cases to watch:** [At least two anticipated risks]
+- **Evaluation examples:** We will look at the direct wording of Women, Female, and Small Business in particular, and from there we will look at related examples of like Female/Women-Owned Enterprises or Entrepreneurship as well as Business Ownership. Further along, we will look at Disability inclusion, underserved communities, and family-oriented. 
+- **Human verification:** At least two team members will check for baseline eligibility throughout all the grants, whether it is US-based or elsewhere.  
+- **Failure cases to watch:** Two cases that we will watch for are early misclassification that are way larger than we expected, or any wrong classification that we need to either relabel the data or input more data to train. 
 
 ### 5. Team responsibilities
 | Member | Primary responsibility (Data / models / evaluation / integration / etc.) | Specific Weekly contribution (work completed) | Planned next task |
-|---|---|---|---|
 |Emily |---|Repository setup and preliminary plan| Find suitable data to supplement the current data|
-|Flora|---|Creating Fake/Synthetic Data plan|Find real data that aren't aligned with Ardook just to test the model more to make sure it is accurate or precise|
+|Flora|---|Creating Fake/Synthetic Data plan, and wrote the Evaluation examples, Human Verification, and failure cases to watch. I also found the models that we will use in training of our datasets. Introduced more metrics that we could use to evaluate our models. |Find real data that aren't aligned with Ardook just to test the model more to make sure it is accurate or precise|
 | Avner |---|---|---|
 ---
 
