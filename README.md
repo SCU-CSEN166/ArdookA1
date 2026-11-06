@@ -55,7 +55,7 @@
 - **Data limitations:** Our provided dataset is currently small, so we need more data to train our model on.
 
 ### 4. Proposed evaluation
-| Metric / test | What it measures | How it will be calculated | Target / success criterion |
+| Metric | What it measures | How it will be calculated | Target / success criterion |
 |---|---|---|---|
 | [Metric - e.g Accuracy, F1, AoC] | [Quality dimension] | [Method/ Formula] | [Target] | 
 | Accuracy | accuracy | number of correct predictions/number of total predictions | aim for 1.0 |
@@ -63,7 +63,7 @@
 | Recall | recall | number of relevant grants the model sucessfully identified | Aim to be above 0.7| 
 
 
-| Advanced Metrics / test | What it measures | How it will be calculated | Target / success criterion |
+| Advanced Metrics | What it measures | How it will be calculated | Target / success criterion |
 |---|---|---|---| 
 | Hard Constraints | Ability to identify and reject ineligible grants | number of correct predictions/number of total predictions | aim for 1.0 |
 | Evidence Grounding | Hallucination avoidance | recommended criteria backed by verbatim text spans/total eligibility criteria claims generated | aim for 100% |
