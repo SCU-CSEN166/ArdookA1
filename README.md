@@ -66,6 +66,7 @@
 |---|---|---|---| 
 | Hard Constraints | Ability to idnetify and reject ineligible grants | number of correct predictions/number of total predictions | aim for 1.0 |
 | Evidence Grounding | Eligibility, criteria, and other information not hallucinated |
+| False positive | Rate at which ineligible grants are recommended |
 
 - **Evaluation examples:** We will look at the direct wording of Women, Female, and Small Business in particular, and from there we will look at related examples of like Female/Women-Owned Enterprises or Entrepreneurship as well as Business Ownership. Further along, we will look at Disability inclusion, underserved communities, and family-oriented. 
 - **Human verification:** At least two team members will check for baseline eligibility throughout all the grants, whether it is US-based or elsewhere.  
