@@ -63,9 +63,8 @@
 | Recall | recall | number of relevant grants the model sucessfully identified | Aim to be above 0.7| 
 
 | Advanced Metrics / test | What it measures | How it will be calculated | Target / success criterion |
-|---|---|---|---|
-| [Metric - e.g Accuracy, F1, AoC] | [Quality dimension] | [Method/ Formula] | [Target] | 
-| Hard Constraints | accuracy | number of correct predictions/number of total predictions | aim for 1.0 |
+|---|---|---|---| 
+| Hard Constraints | Ability to idnetify and reject ineligible grants | number of correct predictions/number of total predictions | aim for 1.0 |
 | Evidence Grounding | Eligibility, criteria, and other information not hallucinated |
 
 - **Evaluation examples:** We will look at the direct wording of Women, Female, and Small Business in particular, and from there we will look at related examples of like Female/Women-Owned Enterprises or Entrepreneurship as well as Business Ownership. Further along, we will look at Disability inclusion, underserved communities, and family-oriented. 
