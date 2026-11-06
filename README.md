@@ -65,9 +65,9 @@
 
 | Advanced Metrics / test | What it measures | How it will be calculated | Target / success criterion |
 |---|---|---|---| 
-| Hard Constraints | Ability to idnetify and reject ineligible grants | number of correct predictions/number of total predictions | aim for 1.0 |
-| Evidence Grounding | Hallucination avoidance | recommended criteria backed by verbatim text spans / total eligibility criteria claims generated | aim for 100% |
-| False positive | Rate at which inadmissible grants are recommended | aim for 0 |
+| Hard Constraints | Ability to identify and reject ineligible grants | number of correct predictions/number of total predictions | aim for 1.0 |
+| Evidence Grounding | Hallucination avoidance | recommended criteria backed by verbatim text spans/total eligibility criteria claims generated | aim for 100% |
+| False positive | Rate at which inadmissible grants are recommended | ineligible grants/total grants | aim for 0 |
 
 - **Evaluation examples:** We will look at the direct wording of Women, Female, and Small Business in particular, and from there we will look at related examples of like Female/Women-Owned Enterprises or Entrepreneurship as well as Business Ownership. Further along, we will look at Disability inclusion, underserved communities, and family-oriented. 
 - **Human verification:** At least two team members will check for baseline eligibility throughout all the grants, whether it is US-based or elsewhere.  
