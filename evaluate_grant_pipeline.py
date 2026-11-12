@@ -17,7 +17,7 @@ def evaluate_grant_pipeline(excel_path: str):
     fit_mapping = {"Poor": 0, "Moderate": 1, "Strong": 2, "Excellent": 3}
     
     # Simulate model predictions (for demonstration, using ground truth + slight noise)
-    # In production, replace `df['Predicted_Fit']` with your model's outputs.
+    # IMPORTANT: production, replace `df['Predicted_Fit']` with model's outputs.
     np.random.seed(42)
     true_labels = df['Fit'].map(fit_mapping).values
     
