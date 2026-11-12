@@ -137,16 +137,16 @@ Macro-F1: With Macro F1, every class is weighted equally, ensuring balance in ac
 ### Successes, failures, and interpretation
 | Example / category | Expected behavior | Actual behavior | Success or failure? | Likely reason |
 |---|---|---|---|---|
-| cross-encoder pipeline | input is a pair: query + document. The output is a single numerical score that shows how relevant doc is to query (between 0 to 1) | [Observed] | [Status] | [Hypothesis] |
+| cross-encoder pipeline | input is a pair: query + document. The output is a single numerical score that shows how relevant doc is to query (between 0 to 1) | partial implementation—needs to be completed | partial success | [Hypothesis] |
 
-- **What improved?** [Evidence]
+- **What improved?** H
 - **What did not improve?** [Evidence]
 - **Next experiment:** [Specific change and how you will measure it]
 
 ### Individual contributions during that week
 | Member | Work completed | Result (worked / partly / failed) | Evidence | Next step |
 |---|---|---|---|---|
-| Emily Ramos | Began architecture for cross-encoder pipeline. | Partially complete | files will be uploaded | working on fixing minor syntax errors and making sure we are not overfitting. |
+| Emily Ramos | Began architecture for cross-encoder pipeline, which takes in synthetic data and is given to another file for evaluation. | Partially complete | files will be uploaded—this is the model I am fine tuning: http://huggingface.co/cross-encoder/ms-marco-MiniLM-L6-v2. | working on fixing minor syntax errors and making sure we are not overfitting. |
 | [Name] | [Specific work] | [Status] | [Link] | [Next step] |
 | [Name] | [Specific work] | [Status] | [Link] | [Next step] |
 ---
