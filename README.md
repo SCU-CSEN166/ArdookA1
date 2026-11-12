@@ -117,14 +117,17 @@
 
 
 ### Evaluation setup
-- **Development data:** [Source, size, selection, annotations, link or access instructions]
+- **Development data:**
+Created a dataset of 120 synthetic examples across multiple relevance categories, we needed more "Poor" examples for use.
+
 - **Metrics and rationale:** [Why these metrics reflect the intended use]
-To improve on last week's base line, I (Emily) iterated using Google Gemini to create a pipeline that measures retrieval ranking quality (Normalized Discounted Cumulative Gain - NDCG), classification performance (Quadratic Weighted Kappa & Macro-F1), disqualifier safety (False Positive Rate on examples with Poor fit), and citation grounding.
+To improve on last week's base line, I (Emily) iterated using Google Gemini to begin to create a pipeline that measures retrieval ranking quality (Normalized Discounted Cumulative Gain - NDCG), classification performance (Quadratic Weighted Kappa & Macro-F1), disqualifier safety (False Positive Rate on examples with Poor fit), and citation grounding.
 
 NDCG: NDCG is useful as it allows use to see how relevant results are (beyond just binary categories like relevant/non-relevant). It also rewards relevant results being listed first by applying a logarithmic discount based on the entry's rank (sort of like how a discount is applied to later rewards in MDP using a discount factor.)
+
 Quadratic Weighted Kappa (QWK): For classification, this metric neasures inter-rater or classifier agreement for categorical items (aka agreement between projected values and actual values). It also adjusts for agreements in classification that occurred by chance).
 
-Macro-F1: With Macro F1, every class is weighted equally, ensuring balance across multiple categories while calculating f1 score. 
+Macro-F1: With Macro F1, every class is weighted equally, ensuring balance in accuracy across multiple categories while calculating f1 score. 
 - **Comparison:** [Baseline versus current approach, if different]
 
 | System / version | Metric 1 | Metric 2 | Notes |
