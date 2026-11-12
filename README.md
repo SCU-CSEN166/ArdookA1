@@ -47,8 +47,8 @@
 | Dataset/source | Link or access instructions | Purpose | Size / languages | Privacy or usage considerations |
 |---|---|---|---|---|
 |---|---|---|---|---|
-|---|---|---|---|---|
 | Synthetic Data  | [URL](https://docs.google.com/spreadsheets/d/1vEmw_SD_ZDxQbQ-pE6rCKqWJaf-RASZWW6QTLTP5HtI/edit?gid=823558156#gid=823558156) | Training/Evaluation | Synthetic Data Created to Train/Test the Model dataset of 70 so far | --- |
+| synthetic data (2) | training/evaluation of new baseline |---|---|---|
 |Ardook All Grant Recommendations | [URL](https://drive.google.com/file/d/10EcaXrXUItPKAJwdqx6BTepwhGWMQIUn/view) | |---|
 
 - **Data preparation:** Removing duplicate rows, making sure numerical features are on a scale that[Cleaning, anonymization, annotation, splitting, deduplication, etc.]
@@ -114,9 +114,17 @@
 
 **Deliverable during Week 8 Lab:** Preliminary evaluation results, metrics, development-set details, and 2–3 representative successes or failures. Include what you will improve next.
 
+
+
 ### Evaluation setup
 - **Development data:** [Source, size, selection, annotations, link or access instructions]
 - **Metrics and rationale:** [Why these metrics reflect the intended use]
+To improve on last week's base line, I (Emily) iterated using Google Gemini to create a pipeline that measures retrieval ranking quality (Normalized Discounted Cumulative Gain - NDCG), classification performance (Quadratic Weighted Kappa & Macro-F1), disqualifier safety (False Positive Rate on examples with Poor fit), and citation grounding.
+
+NDCG: NDCG is useful as it allows use to see how relevant results are (beyond just binary categories like relevant/non-relevant). It also rewards relevant results being listed first by applying a logarithmic discount based on the entry's rank (sort of like how a discount is applied to later rewards in MDP using a discount factor.)
+Quadratic Weighted Kappa (QWK): For classification, this metric neasures inter-rater or classifier agreement for categorical items (aka agreement between projected values and actual values). It also adjusts for agreements in classification that occurred by chance).
+
+Macro-F1: With Macro F1, every class is weighted equally, ensuring balance across multiple categories while calculating f1 score. 
 - **Comparison:** [Baseline versus current approach, if different]
 
 | System / version | Metric 1 | Metric 2 | Notes |
