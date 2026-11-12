@@ -115,7 +115,6 @@
 **Deliverable during Week 8 Lab:** Preliminary evaluation results, metrics, development-set details, and 2–3 representative successes or failures. Include what you will improve next.
 
 
-
 ### Evaluation setup
 - **Development data:**
 Created a dataset of 120 synthetic examples across multiple relevance categories, we needed more "Poor" examples for use.
@@ -138,7 +137,7 @@ Macro-F1: With Macro F1, every class is weighted equally, ensuring balance in ac
 ### Successes, failures, and interpretation
 | Example / category | Expected behavior | Actual behavior | Success or failure? | Likely reason |
 |---|---|---|---|---|
-| [Case] | [Expected] | [Observed] | [Status] | [Hypothesis] |
+| cross-encoder pipeline | input is a pair: query + document. The output is a single numerical score that shows how relevant doc is to query (between 0 to 1) | [Observed] | [Status] | [Hypothesis] |
 
 - **What improved?** [Evidence]
 - **What did not improve?** [Evidence]
@@ -147,8 +146,9 @@ Macro-F1: With Macro F1, every class is weighted equally, ensuring balance in ac
 ### Individual contributions during that week
 | Member | Work completed | Result (worked / partly / failed) | Evidence | Next step |
 |---|---|---|---|---|
+| Emily Ramos | Began architecture for cross-encoder pipeline. | Partially complete | files will be uploaded | working on fixing minor syntax errors and making sure we are not overfitting. |
 | [Name] | [Specific work] | [Status] | [Link] | [Next step] |
-
+| [Name] | [Specific work] | [Status] | [Link] | [Next step] |
 ---
 
 ## Week 8 — Stress-Test: Reliability on Hidden Data
