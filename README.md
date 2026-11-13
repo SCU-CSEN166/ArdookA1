@@ -9,7 +9,7 @@
 
 **Link:** https://github.com/SCU-CSEN166/ArdookA1
 
-**Last updated:** 11/4/2026
+**Last updated:** 11/12/2026
 
 > **How to use this README:** Maintain this single file throughout the project. Complete the Week 5 project plan first, then update the appropriate weekly section before each milestone. Be specific and honest: describe what you attempted, what worked, what did not work, and what evidence supports your conclusions. For every week, document each member's actual contribution. If a task was not completed, explain the blocker and next step. Do not include private or sensitive data in this public README.
 
@@ -139,14 +139,14 @@ Macro-F1: With Macro F1, every class is weighted equally, ensuring balance in ac
 |---|---|---|---|---|
 | cross-encoder pipeline | input is a pair: query + document. The output is a single numerical score that shows how relevant doc is to query (between 0 to 1) | partial implementation—needs to be completed | partial success | [Hypothesis] |
 
-- **What improved?** H
+- **What improved?** 
 - **What did not improve?** [Evidence]
 - **Next experiment:** [Specific change and how you will measure it]
 
 ### Individual contributions during that week
 | Member | Work completed | Result (worked / partly / failed) | Evidence | Next step |
 |---|---|---|---|---|
-| Emily Ramos | Began architecture for cross-encoder pipeline, which takes in synthetic data and is given to another file for evaluation. | Partially complete | files will be uploaded—this is the model I am fine tuning: http://huggingface.co/cross-encoder/ms-marco-MiniLM-L6-v2. | working on fixing minor syntax errors and making sure we are not overfitting. |
+| Emily Ramos | Began architecture for cross-encoder pipeline, which takes in synthetic data and is given to another file for evaluation. completing the model for stress-testing on unlabeled dataset | Partially complete | files will be uploaded—this is the model I am fine tuning: http://huggingface.co/cross-encoder/ms-marco-MiniLM-L6-v2. | working on fixing minor syntax errors and making sure we are not overfitting. |
 | [Name] | [Specific work] | [Status] | [Link] | [Next step] |
 | [Name] | [Specific work] | [Status] | [Link] | [Next step] |
 ---
