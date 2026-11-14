@@ -117,10 +117,10 @@
 
 ### Evaluation setup
 - **Development data:**
-Created a dataset of 120 synthetic examples across multiple relevance categories, we needed more "Poor" examples for use.
+Created a dataset of 120 synthetic examples across multiple relevance categories, we needed more "Poor" examples for use. I (Flora) have created synthetic data using AI to generate a set of grants that are related and unrelated to the grants that are more closely aligned with English and Non-English (Armenian, Georgian, etc.) languages. 
 
 - **Metrics and rationale:** [Why these metrics reflect the intended use]
-To improve on last week's base line, I (Emily) iterated using Google Gemini to begin to create a pipeline that measures retrieval ranking quality (Normalized Discounted Cumulative Gain - NDCG), classification performance (Quadratic Weighted Kappa & Macro-F1), disqualifier safety (False Positive Rate on examples with Poor fit), and citation grounding.
+To improve on last week's base line, I (Emily) iterated using Google Gemini to begin to create a pipeline that measures retrieval ranking quality (Normalized Discounted Cumulative Gain - NDCG), classification performance (Quadratic Weighted Kappa & Macro-F1), disqualifier safety (False Positive Rate on examples with Poor fit), and citation grounding. I (Flora), have used the metrics of Precision, Recall, F1 Score, and Accuracy in my code, and in process of making it more fit, which are not underfit nor overfitting. 
 
 NDCG: NDCG is useful as it allows use to see how relevant results are (beyond just binary categories like relevant/non-relevant). It also rewards relevant results being listed first by applying a logarithmic discount based on the entry's rank (sort of like how a discount is applied to later rewards in MDP using a discount factor.)
 
@@ -129,25 +129,37 @@ Quadratic Weighted Kappa (QWK): For classification, this metric neasures inter-r
 Macro-F1: With Macro F1, every class is weighted equally, ensuring balance in accuracy across multiple categories while calculating f1 score. 
 - **Comparison:** [Baseline versus current approach, if different]
 
+Precision: Can measure grants that are actually relevant
+
+Recall: How many relevant grants the model identifies
+
+Accuracy: Percentage of predictions the model gets correct
+
+F1-Score: Balance between recall and precision
+
 | System / version | Metric 1 | Metric 2 | Notes |
 |---|---:|---:|---|
 | Baseline | [Value] | [Value] | [Notes] |
 | Current | [Value] | [Value] | [Notes] |
+| Flora's Baseline (choosing two metrics)| Precision = 0.9375 | Recall = 0.3571 | The Precision is better than the Recall, which means there needs more work on the model on training relevant grants |
+| Flora's Current (using testing data) | Precision = 1 | Recall: 0.1818 | The model performs poorly on the relevant data, but precision is good. So more focused on training the recall part. |
 
 ### Successes, failures, and interpretation
 | Example / category | Expected behavior | Actual behavior | Success or failure? | Likely reason |
 |---|---|---|---|---|
 | cross-encoder pipeline | input is a pair: query + document. The output is a single numerical score that shows how relevant doc is to query (between 0 to 1) | partial implementation—needs to be completed | partial success | [Hypothesis] |
+| Precision | Have a strong precision score| The precision has increased from 0.9375 to 1| Success| My model identifies grants that are actually relevant while reducing the number of irrelevant grants.|
+| Recall | Have a strong recall score | Recall has decreased from 0.3571 to 0.1818| Failure | Use more training examples and identify more relevant words.|
 
-- **What improved?** 
-- **What did not improve?** [Evidence]
-- **Next experiment:** [Specific change and how you will measure it]
+- **What improved?** I (Flora) have improved the precision.
+- **What did not improve?** I (Flora) did not improve the recall, which is in the evidence of my most recent uploaded Python file called FloraLiBaselinePlusEvalMetrics
+- **Next experiment:** I (Flora) will adjust scoring weights and use more training examples. 
 
 ### Individual contributions during that week
 | Member | Work completed | Result (worked / partly / failed) | Evidence | Next step |
 |---|---|---|---|---|
 | Emily Ramos | Began architecture for cross-encoder pipeline, which takes in synthetic data and is given to another file for evaluation. completing the model for stress-testing on unlabeled dataset | Partially complete | files will be uploaded—this is the model I am fine tuning: http://huggingface.co/cross-encoder/ms-marco-MiniLM-L6-v2. | working on fixing minor syntax errors and making sure we are not overfitting. |
-| [Name] | [Specific work] | [Status] | [Link] | [Next step] |
+| Flora Li | Created a new Baseline with Eval Metrics and created more synthetic data for training and testing purposes| Partly | https://github.com/SCU-CSEN166/ArdookA1/blob/main/FloraLiBaselinePlusEvalMetrics%20(2).ipynb | Changing weights, getting more data, and work on eval metrics that are not nearly as good as I would like it to be. |
 | [Name] | [Specific work] | [Status] | [Link] | [Next step] |
 ---
 
