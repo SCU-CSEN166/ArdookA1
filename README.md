@@ -105,7 +105,7 @@
 | Member | What I personally implemented/tested | Result (worked / partly / failed) | Evidence (commit, PR, experiment) | Blocker / next step |
 |---|---|---|---|---|
 | [Name] | [Specific contribution] | [Status] | [Link] | [Next step] |
-| Flora Li | Model Usage, Model Evaluation, Data Finding/Making, Writing of this ReadMe file, Making of the Python code (using AI)| Worked mostly | [(https://github.com/SCU-CSEN166/ArdookA1/blob/main/FloraLiBaseline.ipynb) | Work on making a better model by utilizing other metrics and looking into more models that could be used|
+| Flora Li | Model Usage, Model Evaluation, Data Finding/Making, Writing of this ReadMe file, Making of the Python code (using AI)| Worked mostly | https://github.com/SCU-CSEN166/ArdookA1/blob/main/FloraLiBaseline.ipynb | Work on making a better model by utilizing other metrics and looking into more models that could be used|
 | Emily Ramos | Testing of model, README maintenance | Worked, for most part  | [Link] | Work on understanding results and performing comprehensive evaluation of model's performance |
 | Avner Chen | Evalutation Metric and Model Finding, Editing ReadMe file |  |
 ---
