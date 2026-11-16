@@ -9,7 +9,7 @@
 
 **Link:** https://github.com/SCU-CSEN166/ArdookA1
 
-**Last updated:** 11/4/2026
+**Last updated:** 11/12/2026
 
 > **How to use this README:** Maintain this single file throughout the project. Complete the Week 5 project plan first, then update the appropriate weekly section before each milestone. Be specific and honest: describe what you attempted, what worked, what did not work, and what evidence supports your conclusions. For every week, document each member's actual contribution. If a task was not completed, explain the blocker and next step. Do not include private or sensitive data in this public README.
 
@@ -47,21 +47,28 @@
 | Dataset/source | Link or access instructions | Purpose | Size / languages | Privacy or usage considerations |
 |---|---|---|---|---|
 |---|---|---|---|---|
-|---|---|---|---|---|
 | Synthetic Data  | [URL](https://docs.google.com/spreadsheets/d/1vEmw_SD_ZDxQbQ-pE6rCKqWJaf-RASZWW6QTLTP5HtI/edit?gid=823558156#gid=823558156) | Training/Evaluation | Synthetic Data Created to Train/Test the Model dataset of 70 so far | --- |
+| synthetic data (2) | training/evaluation of new baseline |---|---|---|
 |Ardook All Grant Recommendations | [URL](https://drive.google.com/file/d/10EcaXrXUItPKAJwdqx6BTepwhGWMQIUn/view) | |---|
 
 - **Data preparation:** Removing duplicate rows, making sure numerical features are on a scale that[Cleaning, anonymization, annotation, splitting, deduplication, etc.]
 - **Data limitations:** Our provided dataset is currently small, so we need more data to train our model on.
 
 ### 4. Proposed evaluation
-| Metric / test | What it measures | How it will be calculated | Target / success criterion |
+| Metric | What it measures | How it will be calculated | Target / success criterion |
 |---|---|---|---|
 | [Metric - e.g Accuracy, F1, AoC] | [Quality dimension] | [Method/ Formula] | [Target] | 
-| Accuracy | accuracy | number of correct predictions/number of total predictions | aim for 1.0 | 
+| Accuracy | accuracy | number of correct predictions/number of total predictions | aim for 1.0 |
 | Precision | precision | number of recommended grants are revelant | Aim to be above 0.7| 
-| Recall | recall | number of relevant grants the model sucessfully identified| Aim to be above 0.7| 
- 
+| Recall | recall | number of relevant grants the model sucessfully identified | Aim to be above 0.7| 
+
+
+| Advanced Metrics | What it measures | How it will be calculated | Target / success criterion |
+|---|---|---|---| 
+| Hard Constraints | Ability to identify and reject ineligible grants | number of correct predictions/number of total predictions | aim for 1.0 |
+| Evidence Grounding | Hallucination avoidance | recommended criteria backed by verbatim text spans/total eligibility criteria claims generated | aim for 100% |
+| False positive | Rate at which inadmissible grants are recommended | ineligible grants/total grants | aim for 0 |
+
 - **Evaluation examples:** We will look at the direct wording of Women, Female, and Small Business in particular, and from there we will look at related examples of like Female/Women-Owned Enterprises or Entrepreneurship as well as Business Ownership. Further along, we will look at Disability inclusion, underserved communities, and family-oriented. 
 - **Human verification:** At least two team members will check for baseline eligibility throughout all the grants, whether it is US-based or elsewhere.  
 - **Failure cases to watch:** Two cases that we will watch for are early misclassification that are way larger than we expected, or any wrong classification that we need to either relabel the data or input more data to train. 
@@ -71,7 +78,7 @@
 |---|---|---|---|
 |Emily | Data collection and model testing|Repository setup and preliminary plan| Find suitable data to supplement the current data|
 |Flora|Data and models|Creating Fake/Synthetic Data plan, and wrote the Evaluation examples, Human Verification, and failure cases to watch. I also found the models that we will use in training of our datasets. Introduced more metrics that we could use to evaluate our models. |Find real data that aren't aligned with Ardook just to test the model more to make sure it is accurate or precise|
-| Avner |---|---|---|
+| Avner | Models, Evalatuation Metrics | Identified and defined more detailed evaluation metrics | Research and find additional models |
 ---
 
 ## Week 6 — Build: Working Baseline
@@ -90,7 +97,7 @@
 | Attempt / change | Worked? (Yes / Partly / No) | Evidence (output, metric, link) | What we learned / next step |
 |---|---|---|---|
 | Implementation of TF-IDF as a baseline model for comparing Ardook's profile to grants | Worked Yes | (in Python code) | Useful baseline but relies more on shared keywords, which limits looking at contextual relationships. |
-| Implementation of all-MiniLM-L6-V2 for semantic similarity | Worked Yes | (in Python code) | It has semantic embeddings that look at related concepts when exact wording is different. Continue testing and comparing against TF-IDF |
+| Implementation of all-MiniLM-L6-V2 for semantic similarity | Worked, there is still some error present (amount of observations classified as strong fit/excellent do not match) | (in Python code) | It has semantic embeddings that look at related concepts when exact wording is different. Continue adjusting keywords, search queries, testing and comparing against TF-IDF |
 | Attempted to use BGE-M3 using GoogleTranslate Feature | Partly | (in Python code) | I will reduce request frequency and smaller batches |
 | Attempted to use BGE-M3 using AutoModelForSeq2SeqLM| Worked Yes | (in Python code) | Look more into other translating features back into English after using models similar to BGE-M3 and testing with other models that also does the same thing as BGE-M3|
 
@@ -98,39 +105,62 @@
 | Member | What I personally implemented/tested | Result (worked / partly / failed) | Evidence (commit, PR, experiment) | Blocker / next step |
 |---|---|---|---|---|
 | [Name] | [Specific contribution] | [Status] | [Link] | [Next step] |
-| Flora Li | Model Usage, Model Evaluation, Data Finding/Making, Writing of this ReadMe file, Making of the Python code (using AI)| Worked mostly | (will input Python link here) | Work on making a better model by utilizing other metrics and looking into more models that could be used|
-| Emily Ramos | Testing of model, README maintenance | Worked, for most part  | [Link] | Work on understanding results and performing comprehensive evaluation of model's performance, generate/find more data in Armenian/Georgian to improve model's performance on data from other languages. |
-
+| Flora Li | Model Usage, Model Evaluation, Data Finding/Making, Writing of this ReadMe file, Making of the Python code (using AI)| Worked mostly | https://github.com/SCU-CSEN166/ArdookA1/blob/main/FloraLiBaseline.ipynb | Work on making a better model by utilizing other metrics and looking into more models that could be used|
+| Emily Ramos | Testing of model, README maintenance | Worked, for most part  | [Link] | Work on understanding results and performing comprehensive evaluation of model's performance |
+| Avner Chen | Evalutation Metric and Model Finding, Editing ReadMe file |  |
 ---
 
 ## Week 7 — Evaluate: Results Checkpoint
 
 **Deliverable during Week 8 Lab:** Preliminary evaluation results, metrics, development-set details, and 2–3 representative successes or failures. Include what you will improve next.
 
+
 ### Evaluation setup
-- **Development data:** [Source, size, selection, annotations, link or access instructions]
+- **Development data:**
+Created a dataset of 120 synthetic examples across multiple relevance categories, we needed more "Poor" examples for use. I (Flora) have created synthetic data using AI to generate a set of grants that are related and unrelated to the grants that are more closely aligned with English and Non-English (Armenian, Georgian, etc.) languages. 
+
 - **Metrics and rationale:** [Why these metrics reflect the intended use]
+To improve on last week's base line, I (Emily) iterated using Google Gemini to begin to create a pipeline that measures retrieval ranking quality (Normalized Discounted Cumulative Gain - NDCG), classification performance (Quadratic Weighted Kappa & Macro-F1), disqualifier safety (False Positive Rate on examples with Poor fit), and citation grounding. I (Flora), have used the metrics of Precision, Recall, F1 Score, and Accuracy in my code, and in process of making it more fit, which are not underfit nor overfitting. 
+
+NDCG: NDCG is useful as it allows use to see how relevant results are (beyond just binary categories like relevant/non-relevant). It also rewards relevant results being listed first by applying a logarithmic discount based on the entry's rank (sort of like how a discount is applied to later rewards in MDP using a discount factor.)
+
+Quadratic Weighted Kappa (QWK): For classification, this metric neasures inter-rater or classifier agreement for categorical items (aka agreement between projected values and actual values). It also adjusts for agreements in classification that occurred by chance).
+
+Macro-F1: With Macro F1, every class is weighted equally, ensuring balance in accuracy across multiple categories while calculating f1 score. 
 - **Comparison:** [Baseline versus current approach, if different]
+
+Precision: Can measure grants that are actually relevant
+
+Recall: How many relevant grants the model identifies
+
+Accuracy: Percentage of predictions the model gets correct
+
+F1-Score: Balance between recall and precision
 
 | System / version | Metric 1 | Metric 2 | Notes |
 |---|---:|---:|---|
 | Baseline | [Value] | [Value] | [Notes] |
 | Current | [Value] | [Value] | [Notes] |
+| Flora's Baseline (choosing two metrics)| Precision = 0.9375 | Recall = 0.3571 | The Precision is better than the Recall, which means there needs more work on the model on training relevant grants |
+| Flora's Current (using testing data) | Precision = 1 | Recall: 0.1818 | The model performs poorly on the relevant data, but precision is good. So more focused on training the recall part. |
 
 ### Successes, failures, and interpretation
 | Example / category | Expected behavior | Actual behavior | Success or failure? | Likely reason |
 |---|---|---|---|---|
-| [Case] | [Expected] | [Observed] | [Status] | [Hypothesis] |
+| cross-encoder pipeline | input is a pair: query + document. The output is a single numerical score that shows how relevant doc is to query (between 0 to 1) | partial implementation—needs to be completed | partial success | [Hypothesis] |
+| Precision | Have a strong precision score| The precision has increased from 0.9375 to 1| Success| My model identifies grants that are actually relevant while reducing the number of irrelevant grants.|
+| Recall | Have a strong recall score | Recall has decreased from 0.3571 to 0.1818| Failure | Use more training examples and identify more relevant words.|
 
-- **What improved?** [Evidence]
-- **What did not improve?** [Evidence]
-- **Next experiment:** [Specific change and how you will measure it]
+- **What improved?** I (Flora) have improved the precision.
+- **What did not improve?** I (Flora) did not improve the recall, which is in the evidence of my most recent uploaded Python file called FloraLiBaselinePlusEvalMetrics
+- **Next experiment:** I (Flora) will adjust scoring weights and use more training examples. 
 
 ### Individual contributions during that week
 | Member | Work completed | Result (worked / partly / failed) | Evidence | Next step |
 |---|---|---|---|---|
+| Emily Ramos | Began architecture for cross-encoder pipeline, which takes in synthetic data and is given to another file for evaluation. completing the model for stress-testing on unlabeled dataset | Partially complete | files will be uploaded—this is the model I am fine tuning: http://huggingface.co/cross-encoder/ms-marco-MiniLM-L6-v2. | working on fixing minor syntax errors and making sure we are not overfitting. |
+| Flora Li | Created a new Baseline with Eval Metrics and created more synthetic data for training and testing purposes| Partly | https://github.com/SCU-CSEN166/ArdookA1/blob/main/FloraLiBaselinePlusEvalMetrics%20(2).ipynb | Changing weights, getting more data, and work on eval metrics that are not nearly as good as I would like it to be. |
 | [Name] | [Specific work] | [Status] | [Link] | [Next step] |
-
 ---
 
 ## Week 8 — Stress-Test: Reliability on Hidden Data

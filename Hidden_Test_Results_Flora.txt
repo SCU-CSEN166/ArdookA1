@@ -1,0 +1,40 @@
+============================================================
+HIDDEN TEST SET RESULTS
+============================================================
+
+Hidden file:       Ardook_hidden_test_grants.xlsx
+Score column:      Best_Match_Score
+Threshold used:    0.5558
+Labeled rows:      10
+
+------------------------------------------------------------
+METRICS
+------------------------------------------------------------
+Accuracy:          0.8000
+Balanced accuracy: 0.7917
+Precision:         0.7500
+Recall:            0.7500
+F1-score:          0.7500
+ROC-AUC:           0.7917
+
+------------------------------------------------------------
+CONFUSION MATRIX (rows = actual, columns = predicted)
+------------------------------------------------------------
+                 Predicted 0   Predicted 1
+Actual 0             5           1
+Actual 1             1           3
+
+------------------------------------------------------------
+PER-GRANT RESULTS
+------------------------------------------------------------
+ Rank                                                                     Program       Fit  Best_Match_Score Predicted_Label              Status_Category Recommendation_Status    Result
+    1                                      Women Founders Network Fast Pitch 2027    Strong          0.657603        Relevant       Potentially Applicable          Strong Match   Correct
+    2                                         Women Who Tech - Tech Startup Grant Excellent          0.756491        Relevant       Potentially Applicable          Strong Match   Correct
+    3 Women's Fund Armenia - Small Grants for Women-Led Initiatives in Aragatsotn      Weak          0.694487        Relevant                       Closed          Needs Review Incorrect
+    4                                       Tory Burch Foundation Fellows Program    Strong          0.557158        Relevant       Potentially Applicable          Strong Match   Correct
+    5                                     TiE Women Global Pitch Competition 2026    Strong          0.440527    Not Relevant                       Closed          Needs Review Incorrect
+    6                                                 IOM ELEVATE Business Grants      Weak          0.473281    Not Relevant                       Closed          Needs Review   Correct
+    7                                                  D-Prize Global Competition      Weak          0.445729    Not Relevant       Potentially Applicable          Needs Review   Correct
+    8        People in Need - Grant Call for Armenian Civil Society Organisations      Weak          0.336038    Not Relevant                       Closed          Needs Review   Correct
+    9                                                AWS Activate (Founders tier)  Moderate          0.331160    Not Relevant       Potentially Applicable          Needs Review   Correct
+   10                                  Cisco Global Problem Solver Challenge 2027  Moderate          0.282479    Not Relevant Review - Not Confirmed Grant          Needs Review   Correct
