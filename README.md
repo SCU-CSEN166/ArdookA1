@@ -176,12 +176,14 @@ F1-Score: Balance between recall and precision
 **Deliverable during Week 9 Lab:** Hidden-test results (as provided by the TA), analysis of at least three important failure cases, and a prioritized improvement plan.
 
 - **Submitted system version / commit:** [Commit hash]
-- **Hidden-test metrics and leaderboard result:** [Results, when available]
-- **Difference from development results:** [Compare; do not assume the hidden set is identical]
+- [Flora's GitHublink]
+- **Hidden-test metrics and leaderboard result:** [Results, when available] 
+  [Flora's test case link]
+- **Difference from development results:** [Compare; do not assume the hidden set is identical] [One thing that I (Flora) noticed was that for my model, the hidden test has a lower precision, but a higher recall score when the hidden test is compared against the training threshold.]
 
 | Failure case / category | What went wrong | Possible cause | Severity / user impact | Proposed fix |
 |---|---|---|---|---|
-| [Case 1] | [Observation] | [Hypothesis] | [Impact] | [Fix] |
+| Precision | I (Flora) noticed that in the hidden test case, the Precision was 0.75, but in the training/testing that I have done the precision score was 0.9375. | I believe that the possible cause was that I had set a threshold as np.linspace(X_train.min(), X_train.max(), 100) but it is too restrictive, so I decided to use a different approach. | The severity isn't that much, but since most of the data points of the hidden test case had a score of 0.7 or more, but it could be improved. | I changed the threshold to thresholds = np.linspace(0.05, 0.95, 91). |
 | [Case 2] | [Observation] | [Hypothesis] | [Impact] | [Fix] |
 | [Case 3] | [Observation] | [Hypothesis] | [Impact] | [Fix] |
 
@@ -189,12 +191,13 @@ F1-Score: Balance between recall and precision
 | Change | Worked? (Yes / Partly / No) | Evidence | Keep, revise, or revert? |
 |---|---|---|---|
 | [Change] | [Status] | [Result] | [Decision] |
+| Flora's change of np.linspace(0.05, 0.95, 91)| Partly | The precision remained the same, but the accuracy improved to 0.8, and the ROC-AUC score improved to 0.875.| I would revise a little bit more before Week 10 over the Thanksgiving break.|
 
 ### Individual contributions during that week
 | Member | Work completed | Result (worked / partly / failed) | Evidence | Next step |
 |---|---|---|---|---|
 | [Name] | [Specific work] | [Status] | [Link] | [Next step] |
-
+| Flora Li | Redid some of the threshold and coding parts of the model that I have done, and wrote some of the GitHub. | Partly | [Link] | Work also on the foreign languages part and continue enhancing the model or switching to another stronger model by Week 10. |
 ---
 
 ## Week 9 — Responsible AI, Peer Testing, and Final Delivery
