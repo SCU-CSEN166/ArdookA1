@@ -176,9 +176,9 @@ F1-Score: Balance between recall and precision
 **Deliverable during Week 9 Lab:** Hidden-test results (as provided by the TA), analysis of at least three important failure cases, and a prioritized improvement plan.
 
 - **Submitted system version / commit:** [Commit hash]
-- [Flora's GitHublink]
+- [Flora's GitHublink: https://github.com/SCU-CSEN166/ArdookA1/blob/main/FloraLiBaselinePlusEvalMetrics%20(3).ipynb]
 - **Hidden-test metrics and leaderboard result:** [Results, when available] 
-  [Flora's test case link]
+  [Flora's test case link: https://github.com/SCU-CSEN166/ArdookA1/blob/main/Hidden_Test_Results_Flora.txt]
 - **Difference from development results:** [Compare; do not assume the hidden set is identical] [One thing that I (Flora) noticed was that for my model, the hidden test has a lower precision, but a higher recall score when the hidden test is compared against the training threshold.]
 
 | Failure case / category | What went wrong | Possible cause | Severity / user impact | Proposed fix |
@@ -197,7 +197,7 @@ F1-Score: Balance between recall and precision
 | Member | Work completed | Result (worked / partly / failed) | Evidence | Next step |
 |---|---|---|---|---|
 | [Name] | [Specific work] | [Status] | [Link] | [Next step] |
-| Flora Li | Redid some of the threshold and coding parts of the model that I have done, and wrote some of the GitHub. | Partly | [Link] | Work also on the foreign languages part and continue enhancing the model or switching to another stronger model by Week 10. |
+| Flora Li | Redid some of the threshold and coding parts of the model that I have done, and wrote some of the GitHub. | Partly | https://github.com/SCU-CSEN166/ArdookA1/blob/main/FloraLiBaselinePlusEvalMetrics%20(3).ipynb  https://github.com/SCU-CSEN166/ArdookA1/blob/main/Hidden_Test_Results_FloraWeek9.txt | Work also on the foreign languages part and continue enhancing the model or switching to another stronger model by Week 10. |
 ---
 
 ## Week 9 — Responsible AI, Peer Testing, and Final Delivery
