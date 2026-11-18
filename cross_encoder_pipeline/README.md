@@ -12,4 +12,23 @@ Download the following files and put them in the same project folder:
 
    
 #2. Installing Required Libraries
-Using WAVE OpenOnDemand should be sufficient for running this pipeline—I personally requested 32 GB and no GPUs were needed. 
+Using WAVE OpenOnDemand should be sufficient for running this pipeline. I personally requested 32 GB and no GPUs were needed. 
+
+Open a Jupyter notebook and a terminal in your browser, navigate to your project folder, and install the following Python packages. 
+
+```
+cd /path/to/your/project_folder
+
+# Optional but recommended: create and activate a virtual environment
+python -m venv venv
+source venv/bin/activate        # On Windows, use: venv\Scripts\activate
+
+# Install dependencies
+pip install torch pandas numpy scikit-learn sentence-transformers openpyxl
+
+```
+
+#3. Running Pipeline
+
+#4. Expected Output
+
