@@ -11,7 +11,7 @@ Download the following files and put them in the same project folder:
 5. Your target test dataset (Ardook_hidden_test_grants.xlsx)
 
    
-#2. Installing Required Libraries
+#2. Installing Required Libraries #
 Using WAVE OpenOnDemand should be sufficient for running this pipeline. I personally requested 32 GB and no GPUs were needed. 
 
 Open a Jupyter notebook and a terminal in your browser, navigate to your project folder, and install the following Python packages. 
@@ -28,7 +28,46 @@ pip install torch pandas numpy scikit-learn sentence-transformers openpyxl
 
 ```
 
-#3. Running Pipeline
+#3. Running Pipeline #
 
-#4. Expected Output
+**Option A: Automatic Run**
+
+Uses Bash script to do important steps automatically, such as training the model.
+
+```
+Bash
+
+chmod +x run_pipeline.sh
+./run_pipeline.sh
+```
+
+**Option B: Manual Run**
+
+Run the following steps separately:
+1. Fine-tune model
+
+```
+Bash
+
+python fine_tune_cross_encoder.py
+```
+
+2. Run evaluation
+```
+Bash
+
+python evaluate_grant_pipeline.py
+
+```
+#4. Expected Output #
+
+Once the pipeline completes, two output files will be generated in your project folder:
+
+Output File
+Description
+grant_predictions_detailed.xlsx
+Contains every grant from your test file along with its raw model score (Predicted_Score), fit tier (Poor, Moderate, Strong, Excellent), and binary recommendation (Useful vs. Not Useful).
+evaluation_metrics_summary.csv
+Contains counts of useful vs. non-useful grants. If the test dataset included ground-truth Fit labels, this file also lists full ordinal metrics (Accuracy, Balanced Accuracy, Macro-F1, QWK, ROC-AUC), binary metrics, and the False Positive Rate for poor fits.
+
 
