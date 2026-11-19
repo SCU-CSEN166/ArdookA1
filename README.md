@@ -206,11 +206,11 @@ F1-Score: Balance between recall and precision
 
 
 ### Peer testing
-- **Team evaluated:** [Team ID]
-- **One thing that worked well:** [Evidence]
-- **One meaningful failure:** [Reproduction steps or example]
-- **One actionable recommendation:** [Specific fix]
-- **Feedback received from another team:** [Summary]
+- **Team evaluated:** Ardook A4
+- **One thing that worked well:** The Installation part, as it was pretty clear
+- **One meaningful failure:** We tried to run the system, but we couldn't get it to work, and we asked the group what to do; they pulled out a document of instructions that they had and ran step by step alongside us. 
+- **One actionable recommendation:** One recommendation for Ardook A4 is to be clearer and more precise in their instructions on where their results are located, as it was kinda hard to find.  
+- **Feedback received from another team:** More precise documentation. 
 
 ### Responsible AI assessment
 - **Potential harms or affected users:** [Who could be affected and how?]
