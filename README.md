@@ -264,6 +264,16 @@ pip install torch pandas numpy scikit-learn sentence-transformers openpyxl
 
 ```
 
+Option A: Run using Bash Script
+
+
+```bash
+chmod +x run_pipeline.sh
+./run_pipeline.sh
+```
+
+
+Option B: Manual Run
 ### Run the system
 ```bash
 python fine_tune_cross_encoder.py
