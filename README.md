@@ -295,5 +295,13 @@ project/
 └── examples/
 ```
 
+### Troubleshooting
 
+Changing grant spreadsheet: Drop any .xlsx file into the folder and update the candidate filename list near the top of evaluate_grant_pipeline.py. The script automatically maps common column variations (such as Program, Grant Name, or Title, and Core Requirements or Requirements).
+
+Changing the organizational profile: Open evaluate_grant_pipeline.py and edit the org_profile string variable to tailor recommendations to a different startup or organization.
+
+No GPU available: If running on a standard laptop without an NVIDIA GPU, remove or comment out os.environ["CUDA_VISIBLE_DEVICES"] = "0" at the top of fine_tune_cross_encoder.py so PyTorch defaults cleanly to the CPU.
+
+Excel read errors (Missing optional dependency 'openpyxl'): Run pip install openpyxl in the terminal and re-run the script.
 
