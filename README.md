@@ -204,6 +204,7 @@ F1-Score: Balance between recall and precision
 
 **Deliverable during Week 10 Lab:** Document peer-testing feedback, Responsible AI concerns, changes made in response, and the final runnable system. Submit the final project report as instructed.
 
+
 ### Peer testing
 - **Team evaluated:** [Team ID]
 - **One thing that worked well:** [Evidence]
@@ -248,21 +249,29 @@ F1-Score: Balance between recall and precision
 ## Setup and Reproducibility (keep updated)
 
 ### Requirements
-[Python version, libraries, compute requirements, model access]
+Python 3.9+
 
 ### Installation
 ```bash
-# Add installation commands here
+cd /path/to/your/project_folder
+
+# Optional but recommended: create and activate a virtual environment
+python -m venv venv
+source venv/bin/activate        # On Windows, use: venv\Scripts\activate
+
+# Install dependencies
+pip install torch pandas numpy scikit-learn sentence-transformers openpyxl
+
 ```
 
 ### Run the system
 ```bash
-# Add an example command here
+python fine_tune_cross_encoder.py
 ```
 
 ### Run evaluation
 ```bash
-# Add an example evaluation command here
+python evaluate_grant_pipeline.py
 ```
 
 ### Repository structure
