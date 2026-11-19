@@ -35,7 +35,6 @@ pip install torch pandas numpy scikit-learn sentence-transformers openpyxl
 Uses Bash script to do important steps automatically, such as training the model.
 
 ```
-Bash
 
 chmod +x run_pipeline.sh
 ./run_pipeline.sh
@@ -47,14 +46,12 @@ Run the following steps separately:
 1. Fine-tune model
 
 ```
-Bash
 
 python fine_tune_cross_encoder.py
 ```
 
 2. Run evaluation
 ```
-Bash
 
 python evaluate_grant_pipeline.py
 
@@ -73,7 +70,7 @@ Contains counts of useful vs. non-useful grants. If the test dataset included gr
 
 # 5. Customization/Troubleshooting #
 
-Changing grant preadsheet: Drop any .xlsx file into the folder and update the candidate filename list near the top of evaluate_grant_pipeline.py. The script automatically maps common column variations (such as Program, Grant Name, or Title, and Core Requirements or Requirements).
+Changing grant spreadsheet: Drop any .xlsx file into the folder and update the candidate filename list near the top of evaluate_grant_pipeline.py. The script automatically maps common column variations (such as Program, Grant Name, or Title, and Core Requirements or Requirements).
 
 Changing the organizational profile: Open evaluate_grant_pipeline.py and edit the org_profile string variable to tailor recommendations to a different startup or organization.
 
