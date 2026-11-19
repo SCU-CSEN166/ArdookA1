@@ -228,7 +228,7 @@ F1-Score: Balance between recall and precision
 ### Individual contributions during that week
 | Member | Final implementation / evaluation / documentation contribution | Result (worked / partly / failed) | Evidence | Reflection / remaining work |
 |---|---|---|---|---|
-| Avner Chen | Set up and executed Team A4's suite in Google Colab | worked |  | [Reflection] |
+| Avner Chen | Set up and executed Team A4's suite in Google Colab | worked | https://colab.research.google.com/drive/1JZXAIvCXhXxo3Eo6Iq6XOcMLgrncUEsR#scrollTo=lhwGMLYyJppo | [Reflection] |
 
 
 
