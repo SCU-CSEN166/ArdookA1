@@ -63,11 +63,22 @@ python evaluate_grant_pipeline.py
 
 Once the pipeline completes, two output files will be generated in your project folder:
 
-Output File
-Description
+Output File Descriptions:
+
 grant_predictions_detailed.xlsx
 Contains every grant from your test file along with its raw model score (Predicted_Score), fit tier (Poor, Moderate, Strong, Excellent), and binary recommendation (Useful vs. Not Useful).
+
 evaluation_metrics_summary.csv
 Contains counts of useful vs. non-useful grants. If the test dataset included ground-truth Fit labels, this file also lists full ordinal metrics (Accuracy, Balanced Accuracy, Macro-F1, QWK, ROC-AUC), binary metrics, and the False Positive Rate for poor fits.
+
+# 5. Customization/Troubleshooting #
+
+Changing grant preadsheet: Drop any .xlsx file into the folder and update the candidate filename list near the top of evaluate_grant_pipeline.py. The script automatically maps common column variations (such as Program, Grant Name, or Title, and Core Requirements or Requirements).
+
+Changing the organizational profile: Open evaluate_grant_pipeline.py and edit the org_profile string variable to tailor recommendations to a different startup or organization.
+
+No GPU available: If running on a standard laptop without an NVIDIA GPU, remove or comment out os.environ["CUDA_VISIBLE_DEVICES"] = "0" at the top of fine_tune_cross_encoder.py so PyTorch defaults cleanly to the CPU.
+
+Excel read errors (Missing optional dependency 'openpyxl'): Run pip install openpyxl in the terminal and re-run the script.
 
 
