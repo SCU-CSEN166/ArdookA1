@@ -11,7 +11,7 @@ Download the following files and put them in the same project folder:
 5. Your target test dataset (Ardook_hidden_test_grants.xlsx)
 
    
-#2. Installing Required Libraries #
+# 2. Installing Required Libraries #
 Using WAVE OpenOnDemand should be sufficient for running this pipeline. I personally requested 32 GB and no GPUs were needed. 
 
 Open a Jupyter notebook and a terminal in your browser, navigate to your project folder, and install the following Python packages. 
@@ -28,7 +28,7 @@ pip install torch pandas numpy scikit-learn sentence-transformers openpyxl
 
 ```
 
-#3. Running Pipeline #
+# 3. Running Pipeline #
 
 **Option A: Automatic Run**
 
@@ -59,7 +59,7 @@ Bash
 python evaluate_grant_pipeline.py
 
 ```
-#4. Expected Output #
+# 4. Expected Output #
 
 Once the pipeline completes, two output files will be generated in your project folder:
 
