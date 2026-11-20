@@ -198,6 +198,7 @@ F1-Score: Balance between recall and precision
 |---|---|---|---|---|
 | [Name] | [Specific work] | [Status] | [Link] | [Next step] |
 | Flora Li | Redid some of the threshold and coding parts of the model that I have done, and wrote some of the GitHub. | Partly | https://github.com/SCU-CSEN166/ArdookA1/blob/main/FloraLiBaselinePlusEvalMetrics%20(3).ipynb  https://github.com/SCU-CSEN166/ArdookA1/blob/main/Hidden_Test_Results_FloraWeek9.txt | Work also on the foreign languages part and continue enhancing the model or switching to another stronger model by Week 10. |
+| Emily Ramos | Running/updating my cross_encoder pipeline | [Status] | [Link] | [Next step] |
 ---
 
 ## Week 9 — Responsible AI, Peer Testing, and Final Delivery
@@ -261,6 +262,7 @@ source venv/bin/activate        # On Windows, use: venv\Scripts\activate
 
 # Install dependencies
 pip install torch pandas numpy scikit-learn sentence-transformers openpyxl
+
 
 ```
 
